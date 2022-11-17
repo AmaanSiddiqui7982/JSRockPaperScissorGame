@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(56, 56, 56);
+}
+.hide{
+    display: none !important;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(45deg, rgb(56, 56, 56) 70%, rgb(0, 0, 0), rgb(111, 63, 63));
+    background-size: 200% 200%;
+    /* animation: gradient 5s ease infinite; */
+}
+
+
+
+.main_btn{
+    font-size: xx-large;
+    background-color: rgb(107, 231, 182);
+    color: rgb(5, 5, 5);
+    border: 2px solid black;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    width: 30vw;
+    transition: 1.2s ease-in;
+}
+.main_btn:hover{
+    
+    clip-path: circle(50% at 50% 50%);
+    border: 3px solid black;
+    width: 40vw;
+    border-radius: 7px;
+    background-color: rgb(95, 206, 236);
+    /* transform: rotate(360deg); */
+    box-shadow: 0px 0px 30px 12px rgb(107, 231, 182);
+
+}
+
+
+
+.heading{
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.2rem;
+    background-color: rgb(56, 56, 56);
+    /* animation: heading 2s infinite alternate ; */
+}
+
+@keyframes heading{
+    0%{
+        color: rgb(95, 206, 236);
+    }
+    100%{
+        color: rgb(205, 234, 241);
+    }
+}
+
+.play_container{
+    background-color: #757575;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: visible;
+    margin-top: 10vh;
+    /* overflow-x: hidden; */
+}
+.play_container:hover .card{
+    filter: blur(6px);
+}
+.span{
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    
+}
+.rock, .paper, .scissor{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #3b3b3b;
+    transition: 0.4s ease-in;
+    border: 2px solid #d5e3ff;
+    border-radius: 2px;
+    transform: perspective(800px) rotateY(45deg);   
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent, rgb(0, 0, 0));
+    box-shadow: 5px 5px 20px 12px black;
+}
+.rock:hover{
+    height: 150%;
+    width: 40%;
+    background-color: #232323;
+    border-radius: 12px;
+    transform: perspective(800px) rotateY(0deg);   
+    filter: blur(0px) !important;
+}
+.paper:hover{
+    height: 150%;
+    width: 40%;
+    background-color: #232323;
+    border-radius: 12px;
+    transform: perspective(800px) rotateY(0deg);   
+    filter: blur(0px) !important;
+    
+}
+.scissor:hover{
+    height: 150%;
+    width: 40%;
+    background-color: #232323;
+    border-radius: 12px;
+    transform: perspective(800px) rotateY(0deg);    
+    filter: blur(0px) !important;
+}
+
+.rock:hover .span{
+    width: 100%;
+    letter-spacing: 14px;
+    
+}
+.rock:hover .fas{
+    text-shadow: 2px 2px 20px #185ADB;
+}
+.paper:hover .span{
+    width: 100%;
+    letter-spacing: 14px;
+}
+.paper:hover .fas{
+    text-shadow: 2px 2px 20px #185ADB;
+}
+.scissor:hover .span{
+    width: 100%;
+    letter-spacing: 14px;
+}
+.scissor:hover .fas{
+    text-shadow: 2px 2px 20px #185ADB;
+}
+
+
+
+.cpucontainer{
+    background-color:  #757575;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: visible;
+    margin-top: 10vh;
+}
+
+
+.message{
+    text-align: center;
+    background-color: rgb(56, 56, 56);
+    letter-spacing: 3px;
+    animation: animatemessage 0.1s ease-in 0s infinite alternate-reverse ;
+}
+
+@keyframes animatemessage {
+    0%{
+        /* letter-spacing: 3px; */
+        color: black;
+    }
+    100%{
+        /* letter-spacing: 13px; */
+        color: #185ADB
+    }
+    
+}
+.restart_btn{
+    font-size: xx-large;
+    background-color: black;
+    color: blanchedalmond;
+    border: none;
+    width: 100%;
+    margin-top: 10vh;
+    letter-spacing: 6px;
+    transition: letter-spacing 0.9s , background-color 2s;
+    text-transform: uppercase;
+}
+.restart_btn:hover{
+    background-color: #232323;
+    cursor: pointer;
+    letter-spacing: 12px;
+
+}
+.paper_cpu, .rock_cpu, .scissor_cpu{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: transparent;
+    
+}
+.paper_cpu:hover .fas, .rock_cpu:hover .fas, .scissor_cpu:hover .fas{
+    text-shadow: 2px 2px 20px #185ADB;
+}
+
+
+.totalconatiner{
+    background-color: #757575;
+    transform: rotate(360deg);
+    
+}
+
+.your_result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
